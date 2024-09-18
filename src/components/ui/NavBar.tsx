@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-
-import { bl33hIcon, menu, close } from "@/assets/index";
+import menu from "@/assets/menu.svg";
+import close from "@/assets/close.svg";
+import logo from "@/assets/logo/logo.webp";
 import Image from "next/image.js";
 
 const Navbar = () => {
@@ -27,86 +28,120 @@ const Navbar = () => {
     },
   ];
   const styles = {
+    innerWidth: "2xl:max-w-[1280px] w-full",
+    interWidth: "lg:w-[80%] w-[100%]",
+
+    paddings: "sm:p-16 xs:p-8 px-6 py-12",
+    yPaddings: "sm:py-16 xs:py-8 py-12",
+    xPaddings: "sm:px-16 px-6",
+    topPaddings: "sm:pt-16 xs:pt-8 pt-12",
+    bottomPaddings: "sm:pb-16 xs:pb-8 pb-12",
+
+    flexCenter: "flex justify-center items-center",
+    flexStart: "flex justify-start items-start",
+    flexEnd: "flex justify-end",
+    navPadding: "pt-[98px]",
+
     paddingX: "sm:px-16 px-6",
     paddingY: "sm:py-16 py-6",
     padding: "sm:px-16 px-6 sm:py-16 py-10",
 
     heroHeadText:
-      "font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
+      "font-black text-eerieBlack lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[90px] mt-2",
     heroSubText:
-      "text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
+      "text-eerieBlack font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
 
     sectionHeadText:
-      "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+      "text-eerieBlack font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins",
+    sectionHeadTextLight:
+      "text-timberWolf font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins",
     sectionSubText:
-      "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+      "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins",
+    sectionSubTextLight:
+      "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins",
   };
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link href="/" passHref>
-          <div
-            className="flex items-center gap-2"
-            onClick={() => {
-              setActive("");
-              window.scrollTo(0, 0);
-            }}
-          >
-            <Image
-              src={bl33hIcon}
-              alt="bl33hIcon"
-              className="w-18 h-9 object-contain"
-            />
-            <p className="text-white text-[18px] font-bold cursor-pointer flex"></p>
-          </div>
-        </Link>
-        <ul
-          className="list-none hidden sm:flex flex-row gap-10"
-          style={{ color: "#b3286c" }}
+        <Link
+          href="/" // Corrected Link for logo to navigate to the homepage
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
         >
-          {navLinks.map((link) => (
+          <Image
+            src={logo} // your logo comes here
+            alt="logo"
+            className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
+          />
+        </Link>
+        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
+          {navLinks.map((nav) => (
             <li
-              key={link.id}
+              key={nav.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[24px] font-bold cursor-pointer`}
-              onClick={() => setActive(link.title)}
+                active === nav.title ? "text-french" : "text-eerieBlack"
+              } hover:text-taupe text-[21px] font-medium font-mova 
+              uppercase tracking-[3px] cursor-pointer nav-links`}
+              onClick={() => setActive(nav.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <Link href={`#${nav.id}`}>{nav.title}</Link>{" "}
+              {/* Corrected Link */}
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <Image
-            className="w-[28px] h-[28px] object-contain cursor-pointer z-20"
-            onClick={() => setToggle(!toggle)}
-            src={toggle ? close : menu}
-            alt="menu"
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } pt-20 p-6 black-gradient absolute top-2 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setActive(link.title);
-                    setToggle(!toggle);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+
+        {/* mobile */}
+        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
+          {toggle ? (
+            <div
+              className={`p-6 bg-flashWhite opacity-[0.98] absolute 
+              top-0 left-0 w-screen h-[100vh] z-10 menu ${
+                toggle ? "menu-open" : "menu-close"
+              }`}
+            >
+              <div className="flex justify-end">
+                <Image
+                  src={close}
+                  alt="close"
+                  className="w-[22px] h-[22px] object-contain cursor-pointer"
+                  onClick={() => setToggle(!toggle)}
+                />
+              </div>
+              <ul
+                className="list-none flex flex-col -gap-[1rem] 
+              items-start justify-end mt-[10rem] -ml-[35px]"
+              >
+                {navLinks.map((nav) => (
+                  <li
+                    key={nav.id}
+                    className={`${
+                      active === nav.title ? "text-french" : "text-eerieBlack"
+                    } text-[88px] font-bold font-arenq 
+                    uppercase tracking-[1px] cursor-pointer`}
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(nav.title);
+                    }}
+                  >
+                    <Link href={`#${nav.id}`}>{nav.title}</Link>{" "}
+                    {/* Corrected Link */}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <Image
+              src={menu}
+              alt="menu"
+              className="w-[34px] h-[34px] object-contain cursor-pointer"
+              onClick={() => setToggle(!toggle)}
+            />
+          )}
         </div>
       </div>
     </nav>

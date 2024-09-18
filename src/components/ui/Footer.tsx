@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
       <div className="bg-grayscale-950 flex justify-center pb-4 text-primary-200">
         <span>
-          Made by <em>Sara Echeverría (bl33h)</em>
+          <em>Mohammad Ibrahim</em>
         </span>
       </div>
     </div>

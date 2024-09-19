@@ -3,6 +3,7 @@ import Banner from "@/components/ui/Banner";
 import Contact from "@/components/ui/Contact";
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/NavBar";
+
 import Projects from "@/components/ui/Project";
 import Skills from "@/components/ui/Skills";
 
@@ -15,7 +16,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow content">
         <Banner />
         <About />
         <Projects />

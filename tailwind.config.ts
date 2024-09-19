@@ -13,7 +13,6 @@ const config: Config = {
         foreground: "var(--foreground)",
         primary: "#663635",
         secondary: "#ffffff",
-        flashWhite: "#f4f4f6",
       },
     },
   },

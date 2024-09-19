@@ -2,17 +2,35 @@
 import html from "@/assets/tech/html.png";
 import css from "@/assets/tech/css.png";
 import javascript from "@/assets/tech/javascript.png";
-import typescript from "@/assets/tech/typescript.png";
-import reactjs from "@/assets/tech/reactjs.png";
-import redux from "@/assets/tech/redux.png";
-import tailwind from "@/assets/tech/tailwind.png";
-import nodejs from "@/assets/tech/nodejs.png";
-import rubyrails from "@/assets/tech/rubyrails.png";
-import graphql from "@/assets/tech/graphql.png";
+
+import reactjs from "@/assets/tech/React-Dark.png";
+import redux from "@/assets/tech/Redux.png";
+
+import nodejs from "@/assets/tech/node.webp";
+
 import postgresql from "@/assets/tech/postgresql.png";
 import git from "@/assets/tech/git.png";
 import figma from "@/assets/tech/figma.png";
-import docker from "@/assets/tech/docker.png";
+import java from "@/assets/tech/java.png";
+import python from "@/assets/tech/py.png";
+import github from "@/assets/tech/Github-Dark.png";
+import eslint from "@/assets/tech/eslint.png";
+
+import Arduino from "@/assets/tech/Arduino.png";
+import Bootstrap from "@/assets/tech/Bootstrap.png";
+import C from "@/assets/tech/C.png";
+import Firebase from "@/assets/tech/Firebase-Dark.png";
+import Flask from "@/assets/tech/Flask-Dark.png";
+import GithubDark from "@/assets/tech/Github-Dark.png";
+import Matlab from "@/assets/tech/Matlab-Dark.png";
+import NextJS from "@/assets/tech/NextJS-Dark.png";
+import PyCharm from "@/assets/tech/PyCharm-Dark.png";
+import ReactDark from "@/assets/tech/React-Dark.png";
+
+import TailwindCSSDark from "@/assets/tech/TailwindCSS-Dark.png";
+import TypeScriptSVG from "@/assets/tech/TypeScript.png";
+import vite from "@/assets/tech/Vite-Dark.png";
+import vscode from "@/assets/tech/VSCode-Dark.png";
 export const textVariant = (delay) => {
   return {
     hidden: {
@@ -90,10 +108,7 @@ export const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+
   {
     name: "React JS",
     icon: reactjs,
@@ -102,36 +117,94 @@ export const technologies = [
     name: "Redux Toolkit",
     icon: redux,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "Rails",
-    icon: rubyrails,
-  },
-  {
-    name: "graphql",
-    icon: graphql,
-  },
-  {
-    name: "postgresql",
+    name: "PostgreSQL",
     icon: postgresql,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "ESLint",
+    icon: eslint,
+  },
+  {
+    name: "GitHub",
+    icon: github,
+  },
+  {
+    name: "Arduino",
+    icon: Arduino,
+  },
+  {
+    name: "Bootstrap",
+    icon: Bootstrap,
+  },
+  {
+    name: "C Language",
+    icon: C,
+  },
+  {
+    name: "Firebase",
+    icon: Firebase,
+  },
+  {
+    name: "Flask",
+    icon: Flask,
+  },
+  {
+    name: "GitHub Dark",
+    icon: GithubDark,
+  },
+  {
+    name: "Matlab",
+    icon: Matlab,
+  },
+  {
+    name: "NextJS",
+    icon: NextJS,
+  },
+  {
+    name: "PyCharm",
+    icon: PyCharm,
+  },
+  {
+    name: "React Dark",
+    icon: ReactDark,
+  },
+
+  {
+    name: "Tailwind CSS",
+    icon: TailwindCSSDark,
+  },
+  {
+    name: "TypeScript",
+    icon: TypeScriptSVG,
+  },
+  {
+    name: "vite",
+    icon: vite,
+  },
+  {
+    name: "vscode",
+    icon: vscode,
   },
 ];

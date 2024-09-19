@@ -8,7 +8,7 @@ import BallCanvas from "../Skills/Ball";
 const Tech = () => {
   return (
     <div id="skills">
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant(2000)}>
         <p className={styles.sectionSubTextLight}>My skills</p>
         <h2 className={styles.sectionHeadTextLight}>Technologies.</h2>
       </motion.div>

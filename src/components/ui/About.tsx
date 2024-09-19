@@ -1,9 +1,8 @@
 "use client";
 import { m, LazyMotion, domAnimation } from "framer-motion";
-
-import SectionTitle from "../About/SectionTitle";
-import { introduction, memoji } from "../About/Constant";
+import { introduction } from "../About/Constant";
 import ImageSlider from "../About/ImageSlider";
+import SectionTitle from "../About/SectionTitle";
 
 const About = () => {
   return (
@@ -65,9 +64,7 @@ const About = () => {
             </LazyMotion>
           </div>
           <div className="w-full md:w-[50%] flex h-full items-center justify-center">
-            <div className="w-[80%] lg:w-[50%] h-[300px] sm:h-[350px] flex justify-center items-center">
-              <ImageSlider images={memoji.image} />
-            </div>
+            <ImageSlider />
           </div>
         </div>
       </div>

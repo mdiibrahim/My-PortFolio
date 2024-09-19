@@ -1,16 +1,11 @@
-import avatar from "@/assets/avatar/avatar.jpg";
-
 export const introduction = {
   text: [
-    "Hello there, I'm so happy you are here! (:",
+    "Hello there, wonderful human! I'm so happy you’re visiting! 😊",
 
-    "My name is Sara, I'm 21 and a junior computer science student based in Guatemala. I have a strong passion for the technologies related to QA and AI.",
-    "Outside of my regular activities, I'm a painting artist, football enthusiast, chess player, and a dog lover.",
-    "I'm continuously thrilled to partner with individuals and teams who wholeheartedly embrace my fervor for crafting extraordinary experiences. Your visit to my portfolio is deeply appreciated !",
+    "My name is Mohammad Ibrahim, and I’m an aspiring entrepreneur and a junior MERN stack developer with a passion for all things tech.",
+    "I specialize in JavaScript, React.js, Node.js, and MongoDB, and I love learning and growing my skills every day.",
+    "In addition to my love for technology, I enjoy digital marketing, solving programming puzzles, and improving my problem-solving abilities through online contests.",
+    "When I’m not coding, I’m probably enjoying some coffee and thinking up my next big idea!",
     "You can download my resume here.",
   ],
-};
-
-export const memoji = {
-  image: [avatar],
 };

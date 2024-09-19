@@ -2,13 +2,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+import { Decal, Float, OrbitControls, Preload } from "@react-three/drei";
 import Loader from "./Loader";
 import * as THREE from "three";
 const Ball = ({ imgUrl }) => {

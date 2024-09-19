@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 
 import { projects } from "./Constant";
-import githubIcon from "@/assets/tech/github.png";
+import githubIcon from "@/assets/tech/Github-Dark.png";
 import Image from "next/image";
 
 export const staggerContainer = (staggerChildren, delayChildren) => {

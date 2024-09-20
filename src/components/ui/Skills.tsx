@@ -1,8 +1,8 @@
 "use client";
 
 import SectionWrapper from "../Skills/SectionWrapper";
-import BallCanvas from "../Skills/Ball";
-import { technologies } from "../Skills/motion";
+import BallCanvas from "@/components/Skills/Ball";
+import { technologies } from "@/components/Skills/motion";
 import bg from "@/assets/bg.png";
 import SectionTitle from "../About/SectionTitle";
 

@@ -24,7 +24,6 @@ const ImageSlider = () => {
   // Example of using the `isInViewport` state (if needed):
   useEffect(() => {
     if (isInViewport) {
-      console.log("Image is in the viewport!");
       // Perform some action here when the image is visible
     }
   }, [isInViewport]);

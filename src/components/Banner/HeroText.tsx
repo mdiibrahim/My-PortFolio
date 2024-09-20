@@ -45,7 +45,7 @@ const HeroText = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center flex justify-center items-center flex-col opacity-100 text-5xl sm:text-6xl cursor-default" // Reduced overall size
-          style={{ fontFamily: "SuperMario", lineHeight: "1.1" }}
+          style={{ lineHeight: "1.1" }}
         >
           {/* Part 1: Hey Cute People */}
           <m.div
@@ -88,7 +88,7 @@ const HeroText = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
               className="text-primary-500 text-6xl sm:text-8xl font-bold"
-              style={{ fontFamily: "Arial, sans-serif", marginLeft: "10px" }} // Emoji size matching "IBRAHIM"
+              style={{ marginLeft: "10px" }} // Emoji size matching "IBRAHIM"
             >
               😊
             </m.span>

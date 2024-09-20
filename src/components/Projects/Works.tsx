@@ -155,7 +155,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         scale: 1,
         speed: 450,
       }}
-      className="shadow-2xl p-5 rounded-lg sm:w-[300px] w-[100%] cursor-pointer"
+      className="  rounded-lg sm:w-[300px] w-[100%] cursor-pointer "
     >
       <div
         onClick={() => window.open(demo_link, "_blank")}
@@ -249,7 +249,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 // Works Component
 const Works: React.FC = () => {
   return (
-    <div className="mt-5 flex flex-wrap justify-center gap-4 text-grayscale-50 w-full">
+    <div className="mt-5 flex flex-wrap justify-center gap-4  w-full">
       {projects.map((project, index) => (
         <ProjectCard key={`project-${index}`} index={index} {...project} />
       ))}

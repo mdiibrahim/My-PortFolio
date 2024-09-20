@@ -9,7 +9,7 @@ import Skills from "@/components/ui/Skills";
 
 export default function Home() {
   return (
-    <div className="flex bg-primary text-secondary flex-col min-h-screen mx-auto">
+    <div className="flex bg-primary text-secondary flex-col min-h-screen  mx-auto">
       {/* Sticky Navbar */}
       <header className="sticky top-0 z-50">
         <Navbar />
@@ -20,7 +20,7 @@ export default function Home() {
         <Banner />
         <About />
         <Projects />
-        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
+        <div className="">
           <Skills />
         </div>
         <Contact />

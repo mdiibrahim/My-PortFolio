@@ -1,7 +1,10 @@
 "use client";
 import { m, LazyMotion, domAnimation } from "framer-motion";
-
-const SectionTitle = (props) => {
+interface ISectionTitle {
+  title: string;
+  subtitle: string;
+}
+const SectionTitle = (props: ISectionTitle) => {
   const { title, subtitle } = props;
 
   return (
@@ -16,16 +19,13 @@ const SectionTitle = (props) => {
           className="opacity-50"
           style={{
             textTransform: "uppercase",
-            fontFamily: "Poppins, sans-serif",
+
             fontWeight: "600",
           }}
         >
           {subtitle}
         </span>
-        <h2
-          className="tracking-wider text-7xl sm:text-8xl md:text-9xl"
-          style={{ fontFamily: "Morganite Black" }}
-        >
+        <h2 className="tracking-wider text-7xl sm:text-8xl md:text-9xl">
           {title.split("").map((char, index) => {
             if (char === " ") {
               return " ";

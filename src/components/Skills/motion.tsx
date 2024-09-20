@@ -4,7 +4,7 @@ import css from "@/assets/tech/css.png";
 import javascript from "@/assets/tech/javascript.png";
 
 import reactjs from "@/assets/tech/React-Dark.png";
-import redux from "@/assets/tech/Redux.png";
+import Redux from "@/assets/tech/redux.png";
 
 import nodejs from "@/assets/tech/node.webp";
 
@@ -28,7 +28,7 @@ import PyCharm from "@/assets/tech/PyCharm-Dark.png";
 import ReactDark from "@/assets/tech/React-Dark.png";
 
 import TailwindCSSDark from "@/assets/tech/TailwindCSS-Dark.png";
-import TypeScriptSVG from "@/assets/tech/TypeScript.png";
+import TypeScriptSVG from "@/assets/tech/typeScript.png";
 import vite from "@/assets/tech/Vite-Dark.png";
 import vscode from "@/assets/tech/VSCode-Dark.png";
 export const textVariant = (delay) => {
@@ -86,13 +86,13 @@ export const styles = {
     "text-secondary font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
 
   sectionHeadText:
-    "text-secondary font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins",
+    "text-secondary font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] ",
   sectionHeadTextLight:
-    "text-secondary font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins",
+    "text-secondary font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] ",
   sectionSubText:
-    "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins",
+    "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold ",
   sectionSubTextLight:
-    "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins",
+    "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold ",
 };
 
 export const technologies = [
@@ -115,7 +115,7 @@ export const technologies = [
   },
   {
     name: "Redux Toolkit",
-    icon: redux,
+    icon: Redux,
   },
 
   {

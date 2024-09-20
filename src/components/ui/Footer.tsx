@@ -45,7 +45,7 @@ const Footer = () => {
       variants={footerVariants}
       viewport={{ once: true }} // Triggers the animation only once when the footer is in view
     >
-      <div className="w-full h-[100px] flex justify-center items-center gap-6 p-6">
+      <div className="w-full h-[120px] flex justify-center items-center gap-6 p-10">
         {/* GitHub Icon */}
         <motion.a
           href="https://github.com/mdiibrahim"

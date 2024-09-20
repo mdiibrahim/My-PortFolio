@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { PT_Serif } from "next/font/google";
+import Navbar from "@/components/ui/NavBar";
+import Footer from "@/components/ui/Footer";
 
 const ptSerif = PT_Serif({
   subsets: ["latin"],
@@ -21,7 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ptSerif.className} antialiased`}>{children}</body>
+      <body className={`${ptSerif.className} antialiased`}>
+        <div className="flex bg-primary text-secondary flex-col min-h-screen mx-auto">
+          {/* Sticky Navbar */}
+          <header className="sticky top-0 z-50">
+            <Navbar />
+          </header>
+          <main className="flex-grow">{children}</main>
+          {/* Footer at the bottom */}
+          <footer className="mt-auto">
+            <Footer />
+          </footer>
+        </div>
+      </body>
     </html>
   );
 }

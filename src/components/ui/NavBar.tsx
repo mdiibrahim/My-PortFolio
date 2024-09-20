@@ -84,8 +84,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-french" : ""
-              } hover:text-taupe text-[21px] font-medium font-mova 
+                active === nav.title ? "text-secondary" : ""
+              } hover:text-taupe text-[21px] font-medium 
               uppercase tracking-[3px] cursor-pointer nav-links`}
               onClick={() => setActive(nav.title)}
             >
@@ -95,53 +95,46 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* mobile */}
-        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
-          {toggle ? (
-            <div
-              className={`p-6 bg-flashWhite opacity-[0.98] absolute 
-              top-0 left-0 w-screen h-[100vh] z-10 menu ${
-                toggle ? "menu-open" : "menu-close"
-              }`}
-            >
-              <div className="flex justify-end">
-                <Image
-                  src={close}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
-              </div>
-              <ul
-                className="list-none flex flex-col -gap-[1rem] 
-              items-start justify-end mt-[10rem] -ml-[35px]"
-              >
-                {navLinks.map((nav) => (
-                  <li
-                    key={nav.id}
-                    className={`${
-                      active === nav.title ? "text-french" : ""
-                    } text-[88px] font-bold 
-                    uppercase tracking-[1px] cursor-pointer`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}
-                  >
-                    <Link href={`#${nav.id}`}>{nav.title}</Link>{" "}
-                    {/* Corrected Link */}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
+        {/* Mobile Menu Icon */}
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <Image
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          />
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`${
+            toggle ? "flex" : "hidden"
+          } p-6 bg-flashWhite opacity-[0.98] absolute top-0 left-0 w-full h-full z-10 flex-col items-start`}
+        >
+          <div className="flex justify-end w-full">
             <Image
-              src={menu}
-              alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
+              src={close}
+              alt="close"
+              className="w-[22px] h-[22px] object-contain cursor-pointer"
               onClick={() => setToggle(!toggle)}
             />
-          )}
+          </div>
+          <ul className="list-none flex flex-col items-start justify-start mt-[4rem] ml-6 space-y-8">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-french" : "text-black"
+                } text-[28px] font-bold uppercase tracking-[1px] cursor-pointer`}
+                onClick={() => {
+                  setToggle(false); // Close menu after click
+                  setActive(nav.title);
+                }}
+              >
+                <Link href={`#${nav.id}`}>{nav.title}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>

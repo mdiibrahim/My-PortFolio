@@ -191,11 +191,12 @@ const Contact = () => {
                       </div>
                       <div className="w-full flex justify-center">
                         <button
-                          className={`w-[120px] h-[50px] mt-5 rounded-lg border border-gray-300 cursor-pointer mb-5 text-white font-semibold transition-transform transform hover:scale-105 ${
-                            !isSent
-                              ? "bg-primary hover:bg-blue-700 border-blue-500"
-                              : "bg-green-500 hover:bg-green-700 border-green-500"
-                          } shadow-lg`}
+                          className={`w-[120px] h-[50px] mt-5 rounded-lg border cursor-pointer mb-5 text-white font-semibold transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 shadow-lg
+      ${
+        !isSent
+          ? "bg-primary border-blue-500 hover:bg-blue-700 focus:ring-blue-300"
+          : "bg-green-500 border-green-500 hover:bg-green-700 focus:ring-green-300"
+      }`}
                           type="submit"
                         >
                           {!isSent ? "Send" : "Done!"}

@@ -7,10 +7,10 @@ import bg from "@/assets/bg.png";
 import SectionTitle from "../About/SectionTitle";
 const Tech = () => {
   return (
-    <div className="w-full flex  justify-center " id="skills">
-      <div className="w-full ">
+    <div className="w-full flex justify-center" id="skills">
+      <div className="w-full xl:w-[70%] flex flex-col pb-16">
         <div
-          className="justify-center  flex flex-col pb-16 w-full h-full shadow-2xl "
+          className="justify-center w-full h-full shadow-2xl p-5 "
           style={{
             backgroundImage: `url(${bg.src})`,
 

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "PoshKits founder",
   ],
   authors: [{ name: "Mohammad Ibrahim", url: "https://github.com/mdiibrahim" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +40,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          sizes="any"
+          className="rounded-xl"
+        />
+      </head>
       <body className={`${ptSerif.className} antialiased`}>
         <div className="flex bg-primary text-secondary flex-col min-h-screen mx-auto">
           {/* Sticky Navbar */}

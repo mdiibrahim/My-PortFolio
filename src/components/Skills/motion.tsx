@@ -31,7 +31,6 @@ import TailwindCSSDark from "@/assets/tech/TailwindCSS-Dark.png";
 
 import vite from "@/assets/tech/Vite-Dark.png";
 import vscode from "@/assets/tech/VSCode-Dark.png";
-import typeScript from "@/assets/tech/typeScript.png";
 
 export const textVariant = (delay: number) => {
   return {
@@ -200,10 +199,7 @@ export const technologies = [
     name: "Tailwind CSS",
     icon: TailwindCSSDark,
   },
-  {
-    name: "TypeScript",
-    icon: typeScript,
-  },
+
   {
     name: "vite",
     icon: vite,

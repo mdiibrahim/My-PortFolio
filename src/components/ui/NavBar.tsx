@@ -109,7 +109,7 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? "flex" : "hidden"
-          } p-6 bg-flashWhite opacity-[0.98] absolute top-0 left-0 w-full h-full z-10 flex-col items-start`}
+          } p-6 bg-primary opacity-[0.98] absolute top-0 left-0 w-full h-full z-10 flex-col items-start`}
         >
           <div className="flex justify-end w-full">
             <Image
@@ -124,7 +124,7 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`${
-                  active === nav.title ? "text-french" : "text-black"
+                  active === nav.title ? "text-black" : "text-white"
                 } text-[28px] font-bold uppercase tracking-[1px] cursor-pointer`}
                 onClick={() => {
                   setToggle(false); // Close menu after click

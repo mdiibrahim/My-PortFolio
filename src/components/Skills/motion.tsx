@@ -28,10 +28,10 @@ import PyCharm from "@/assets/tech/PyCharm-Dark.png";
 import ReactDark from "@/assets/tech/React-Dark.png";
 
 import TailwindCSSDark from "@/assets/tech/TailwindCSS-Dark.png";
-import TypeScriptSVG from "@/assets/tech/typeScript.png";
+import TypeScript from "@/assets/tech/typeScript.png";
 import vite from "@/assets/tech/Vite-Dark.png";
 import vscode from "@/assets/tech/VSCode-Dark.png";
-export const textVariant = (delay) => {
+export const textVariant = (delay: number) => {
   return {
     hidden: {
       y: -50,
@@ -49,7 +49,10 @@ export const textVariant = (delay) => {
   };
 };
 
-export const staggerContainer = (staggerChildren, delayChildren) => {
+export const staggerContainer = (
+  staggerChildren: number,
+  delayChildren: number
+) => {
   return {
     hidden: {},
     show: {
@@ -197,7 +200,7 @@ export const technologies = [
   },
   {
     name: "TypeScript",
-    icon: TypeScriptSVG,
+    icon: TypeScript,
   },
   {
     name: "vite",

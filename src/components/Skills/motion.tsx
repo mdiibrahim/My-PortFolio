@@ -28,9 +28,11 @@ import PyCharm from "@/assets/tech/PyCharm-Dark.png";
 import ReactDark from "@/assets/tech/React-Dark.png";
 
 import TailwindCSSDark from "@/assets/tech/TailwindCSS-Dark.png";
-import TypeScript from "@/assets/tech/typeScript.png";
+
 import vite from "@/assets/tech/Vite-Dark.png";
 import vscode from "@/assets/tech/VSCode-Dark.png";
+import typeScript from "@/assets/tech/typeScript.png";
+
 export const textVariant = (delay: number) => {
   return {
     hidden: {
@@ -200,7 +202,7 @@ export const technologies = [
   },
   {
     name: "TypeScript",
-    icon: TypeScript,
+    icon: typeScript,
   },
   {
     name: "vite",

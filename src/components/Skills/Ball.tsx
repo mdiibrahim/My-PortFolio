@@ -5,7 +5,16 @@ import { Decal, Float, OrbitControls, Preload } from "@react-three/drei";
 import Loader from "./Loader";
 import * as THREE from "three";
 
-const Ball = ({ imgUrl }) => {
+// Define types for props
+interface BallProps {
+  imgUrl: { src: string };
+}
+
+interface BallCanvasProps {
+  icon: { src: string };
+}
+
+const Ball: React.FC<BallProps> = ({ imgUrl }) => {
   // Use useLoader to load the texture efficiently
   const decal = useLoader(THREE.TextureLoader, imgUrl.src);
 
@@ -28,7 +37,7 @@ const Ball = ({ imgUrl }) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
     <Canvas frameloop="always" gl={{ preserveDrawingBuffer: false }}>
       <Suspense fallback={<Loader />}>

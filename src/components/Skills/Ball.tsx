@@ -39,9 +39,9 @@ const Ball: React.FC<BallProps> = ({ imgUrl }) => {
 
 const BallCanvas: React.FC<BallCanvasProps> = ({ icon }) => {
   return (
-    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: false }}>
+    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<Loader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} position={0} />
         <Ball imgUrl={icon} />
       </Suspense>
       <Preload all />

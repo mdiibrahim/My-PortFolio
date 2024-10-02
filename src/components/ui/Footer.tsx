@@ -135,7 +135,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="mt-2 text-sm text-primary-400"
+          className="m-2 mx-10 text-sm text-primary-400 p-4"
         >
           &quot;Striving to turn my dreams into reality, one line of code at a
           time.&quot;

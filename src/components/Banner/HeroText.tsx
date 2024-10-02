@@ -64,7 +64,7 @@ const HeroText = () => {
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
             className="text-primary-500 text-4xl sm:text-5xl my-4" // Slightly smaller than the default size
           >
-            Looking For Developer
+            Looking For Engineer
           </m.div>
 
           {/* Part 3: Ibrahim with larger font size */}

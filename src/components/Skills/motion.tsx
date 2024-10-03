@@ -9,7 +9,7 @@ import Redux from "@/assets/tech/redux.png";
 
 import nodejs from "@/assets/tech/node.webp";
 
-import typeScript from "@/assets/tech/typeScript.png";
+import typeScript from "@/assets/tech/typeScript-dark.png";
 
 import java from "@/assets/tech/java.png";
 import python from "@/assets/tech/py.png";
